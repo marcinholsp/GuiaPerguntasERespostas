@@ -3,9 +3,10 @@ const app = express();
 
 //Estou dizendo pro Express usar ejs como view engine
 app.set('view-engine', 'ejs');
+app.use(express.static("public"));
 
 app.get('/',function (req, res) {
-    res.render('index');
+    res.render('index.ejs');
 });
 
 app.listen(3000, () => {
