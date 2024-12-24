@@ -9,6 +9,10 @@ app.get('/',function (req, res) {
     res.render('index.ejs');
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.get("/perguntar", (req, res) => {
+    res.render("perguntar.ejs");
+})
+
+app.listen(8080, () => {
+    console.log('Server is running on port 8080');
 })
